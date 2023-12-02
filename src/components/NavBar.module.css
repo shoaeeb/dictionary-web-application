@@ -1,0 +1,15 @@
+.nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 16px;
+  flex-direction: row;
+  border: 2px solid red;
+  align-items: center;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid green;
+  align-items: center;
+}

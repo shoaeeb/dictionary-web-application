@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap");
+
+:root {
+  --black: #050505;
+  --grey1: #1f1f1f;
+  --grey2: #2d2d2d;
+  --grey3: #3a3a3a;
+  --grey4: #838383;
+  --grey5: #a3a3a3;
+  --grey6: #dddddd;
+  --white: #ffffff;
+  --purple: rgb(164, 69, 237);
+  --melon: rgb(255, 82, 82);
+
+  --text: var(--black);
+  --subText: var(--grey4);
+  --background: var(--white);
+  --searchBG: var(--grey6);
+  --borders: var(--grey6);
+}
+
+.dark {
+  --text: var(--white);
+  --subText: var(--grey4);
+  --background: var(--black);
+  --searchBG: var(--grey2);
+  --borders: var(--grey2);
+}
+
+.x {
+  font-family: "Inconsolata", monospace;
+  font-family: "Inter", sans-serif;
+  font-family: "Lora", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.seriff {
+  font-family: "Inter", sans-serif;
+}
+
+.mono {
+  font-family: "Inconsolata", monospace;
+}

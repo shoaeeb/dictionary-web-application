@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  border: 1px solid green;
+  justify-content: center;
+  margin: 0 auto;
+  width: 60%;
+}
+.form input[type="search"] {
+  padding: 10px 30px;
+  width: 60%;
+  border: none;
+}
+.form input[type="search"]:focus {
+  outline: none;
+}
+.icon {
+  position: relative;
+  height: 15px;
+  left: -30px;
+  top: 8px;
+}
+
+.searchBackgroundLight {
+  background-color: var(--grey5);
+  color: var(--text);
+}
+.searchBackgroundDark {
+  background-color: var(--grey1);
+  color: var(--white);
+}

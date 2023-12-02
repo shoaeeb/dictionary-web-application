@@ -1,0 +1,48 @@
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  border: 1px solid red;
+  margin: 25px auto;
+  padding: 15px;
+}
+.subHeading {
+  color: var(--purple);
+  font-weight: 800;
+}
+
+.meaning {
+  color: var(--grey4);
+  margin: 5px 0;
+}
+
+.listMeaning {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 500px;
+  margin: 10px 0;
+}
+
+.synonyms {
+  font-weight: 100;
+  margin: 5px 0;
+  text-decoration: underline;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:visted {
+  text-decoration: underline;
+}
+
+.link:active {
+  text-decoration: underline;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
