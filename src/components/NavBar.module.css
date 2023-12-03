@@ -3,13 +3,30 @@
   justify-content: space-around;
   margin: 16px;
   flex-direction: row;
-  border: 2px solid red;
+  border: 1px solid red;
   align-items: center;
+  align-self: center;
 }
 
 .action {
   display: flex;
   justify-content: space-between;
-  border: 1px solid green;
   align-items: center;
+}
+
+.dark {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.light {
+  background-color: var(--white);
+  color: var(--white);
+}
+
+@media screen and (width<=600px) {
+  .nav {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

@@ -5,10 +5,14 @@ import MoonIcon from "./MoonIcon";
 import Switcher from "./Switcher";
 function NavBar({ setFont, setIsDark, isDark, font }) {
   return (
-    <nav className={styles.nav}>
+    <nav
+      className={`${styles.nav} ${isDark && styles.dark} ${
+        !isDark && styles.light
+      }`}
+    >
       <Logo />
       <div className={styles.action}>
-        <Font font={font} setFont={setFont} />
+        <Font isDark={isDark} font={font} setFont={setFont} />
         <Switcher isDark={isDark} setIsDark={setIsDark} />
         <MoonIcon />
       </div>

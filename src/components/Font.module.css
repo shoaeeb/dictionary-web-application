@@ -7,3 +7,11 @@
   background-color: transparent;
   font-family: "Inter", sans-serif;
 }
+
+.light {
+  color: var(--grey4);
+}
+
+.dark {
+  color: var(--white);
+}

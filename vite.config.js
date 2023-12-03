@@ -5,4 +5,7 @@ import macrosPlugin from "vite-plugin-babel-macros";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), eslint(), macrosPlugin()],
+  server: {
+    host: "0.0.0.0",
+  },
 });

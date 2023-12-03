@@ -1,9 +1,9 @@
 .form {
   display: flex;
-  border: 1px solid green;
   justify-content: center;
   margin: 0 auto;
   width: 60%;
+  border: 1px solid red;
 }
 .form input[type="search"] {
   padding: 10px 30px;
@@ -27,4 +27,11 @@
 .searchBackgroundDark {
   background-color: var(--grey1);
   color: var(--white);
+}
+
+@media screen and (width<=600px) {
+  .form {
+    width: 100%;
+    display: flex;
+  }
 }

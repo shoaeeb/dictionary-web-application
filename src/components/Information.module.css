@@ -2,10 +2,21 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 50%;
-  border: 1px solid red;
+  align-items: flex-start;
+  width: 90%;
   margin: 25px auto;
+  border: 1px solid red;
   padding: 15px;
+  height: 500px;
+}
+.mainDark {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.mainLight {
+  background-color: var(--white);
+  color: var(--black);
 }
 .subHeading {
   color: var(--purple);
@@ -21,8 +32,8 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 500px;
   margin: 10px 0;
+  word-wrap: break-word;
 }
 
 .synonyms {
@@ -45,4 +56,19 @@
 
 .link:hover {
   text-decoration: underline;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+@media screen and (width<=600px) {
+  .main {
+    height: 600px;
+    padding: 5px;
+    width: fit-content;
+    flex-wrap: wrap;
+  }
 }

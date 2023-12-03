@@ -1,0 +1,41 @@
+.main {
+  border: 1px solid red;
+  height: 500px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icon {
+  animation-name: spinner;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  height: 50px;
+}
+
+.dark {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.iconLight {
+  color: var(--grey4);
+}
+.iconDark {
+  color: var(--white);
+}
+
+.main p {
+  font-size: 20px;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

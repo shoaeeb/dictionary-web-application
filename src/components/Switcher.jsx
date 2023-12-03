@@ -17,7 +17,7 @@ function Switcher({ isDark, setIsDark }) {
       {!isDark && (
         <FontAwesomeIcon
           onClick={() => setIsDark(true)}
-          className={styles.icon}
+          className={`${styles.icon} ${!isDark && styles.light}`}
           icon="fa-solid fa-toggle-off"
         />
       )}

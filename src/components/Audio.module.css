@@ -1,0 +1,17 @@
+.audio {
+  display: flex;
+  position: relative;
+  right: 0;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin: 5px 0px;
+}
+
+.icon {
+  color: var(--purple);
+  height: 50px;
+}

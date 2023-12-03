@@ -3,3 +3,7 @@
   width: 60px;
   height: 30px;
 }
+
+.light {
+  color: var(--grey4);
+}
