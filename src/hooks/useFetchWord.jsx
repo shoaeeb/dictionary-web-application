@@ -48,6 +48,7 @@ function reducer(state, action) {
 }
 
 function useFetchWord(word) {
+  word = word.toLowerCase();
   const [{ status, message, data }, dispatch] = useReducer(
     reducer,
     initialState
