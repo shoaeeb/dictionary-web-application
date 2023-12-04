@@ -1,15 +1,16 @@
 import { useEffect } from "react";
 
-function useKey(key, onCall) {
+function useKey(key, condition, callBack) {
   useEffect(
     function (e) {
-      function toCall() {
-        if (e.code.toLowerCase() === key.toLowerCase()) onCall();
+      function toCall(e) {
+        if (condition?.()) return;
+        if (e.code.toLowerCase() === key.toLowerCase()) callBack();
       }
-      document.addEventListener("click", toCall);
-      return () => document.removeEventListener("click", toCall);
+      document.addEventListener("keydown", toCall);
+      return () => document.removeEventListener("keydown", toCall);
     },
-    [key, onCall]
+    [key, callBack, condition]
   );
 }
 

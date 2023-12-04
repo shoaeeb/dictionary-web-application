@@ -48,3 +48,23 @@
 .mono {
   font-family: "Inconsolata", monospace;
 }
+
+.darkTheme {
+  background-color: var(--black);
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.lightTheme {
+  background-color: var(--white);
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+@media screen and (width<=550px) {
+  .lightTheme,
+  .darkTheme {
+    padding-top: 12px;
+    padding-bottom: 100px;
+  }
+}

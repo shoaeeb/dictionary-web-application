@@ -15,9 +15,9 @@ function Information({ isDark, font, data }) {
 
       <p className={styles.meaning}>Meaning</p>
       <ul className={styles.listMeaning}>
-        {meanings.map((meaning) => {
+        {meanings.map((meaning, index) => {
           return (
-            <li className={styles.list} key={meaning.partOfSpeech}>
+            <li className={styles.list} key={index}>
               <h3>
                 {meaning.partOfSpeech.split("").at(0).toUpperCase() +
                   "" +
@@ -64,7 +64,12 @@ function Information({ isDark, font, data }) {
 
       <p className={styles.paraLink}>
         Source-
-        <a className={styles.link} href={sourceUrls}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.link}
+          href={sourceUrls}
+        >
           source url
         </a>
       </p>

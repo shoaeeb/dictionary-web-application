@@ -66,10 +66,14 @@ function useFetchWord(word) {
           dispatch({ type: "dataRecieved", payload: formattedData });
           console.log(formattedData);
         } catch (error) {
-          dispatch({ type: "dataError", payload: error.message });
+          dispatch({
+            type: "dataError",
+            payload: "Cannot Find the Word You are Searching For",
+          });
         }
       }
       if (word.length > 2) fetchWord();
+      return () => (document.title = `Word || ${word}`);
     },
     [word]
   );
