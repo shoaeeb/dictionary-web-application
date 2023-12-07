@@ -5,7 +5,7 @@ const BASE_URL = "https://api.dictionaryapi.dev/api/v2/entries/en";
 function formatData(obj) {
   let data = [];
   const { meanings, word, phonetics, sourceUrls } = obj;
-  const { audio, text } = phonetics.at(1);
+
   console.log("inside");
   let meaningData = meanings.map((meaning) => {
     return {
@@ -15,8 +15,8 @@ function formatData(obj) {
     };
   });
   const Fobj = {
-    audio: audio,
-    text: text,
+    audio: phonetics?.at(0)?.audio || null,
+    text: phonetics?.at(0)?.text || null,
     sourceUrls: sourceUrls,
     word: word,
     meanings: meaningData,
@@ -60,13 +60,16 @@ function useFetchWord(word) {
         try {
           dispatch({ type: "loadingData" });
           const res = await fetch(`${BASE_URL}/${word}`);
-          if (!res.ok)
-            throw new Error("Cannot Find the Word You are Searching For");
+          console.log(res);
+          // if (!res.ok)
+          //   throw new Error("Cannot Find the Word You are Searching For");
           const data = await res.json();
           const formattedData = formatData(data.at(0));
+          console.log(formattedData);
           dispatch({ type: "dataRecieved", payload: formattedData });
           console.log(formattedData);
         } catch (error) {
+          console.error(error);
           dispatch({
             type: "dataError",
             payload: "Cannot Find the Word You are Searching For",

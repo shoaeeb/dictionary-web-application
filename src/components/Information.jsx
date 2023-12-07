@@ -11,7 +11,7 @@ function Information({ isDark, font, data }) {
     >
       <h1 className={styles.mainHeading}>{word}</h1>
       <span className={styles.subHeading}>{text}</span>
-      <Audio audio={audio} />
+      {audio && <Audio audio={audio} />}
 
       <p className={styles.meaning}>Meaning</p>
       <ul className={styles.listMeaning}>
